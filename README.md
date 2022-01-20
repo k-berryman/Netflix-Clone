@@ -1,5 +1,7 @@
 Tutorial by https://www.youtube.com/watch?v=XtMThy8QKqU&ab_channel=CleverProgrammer
 
+Final Project - https://netflix-clone-67ef3.web.app
+
 ## Step 1
 ### Create a TMDB Account / API Key
 https://www.themoviedb.org/?language=en-US
@@ -67,7 +69,7 @@ Each row is a component. Pass in a prop (standing for properties). Row.js and Ro
 Create Banner.js and Banner.css
 
 ## Step 7
-### Build the Nav NavBar
+### Build the Nav Bar
 Create Nav.js and Nav.css
 
 ## Step 8
@@ -80,3 +82,21 @@ Use movie-trailer
 
 ## Step 9
 ## Deploy App to Firebase
+Host this online!
+Go into terminal
+`firebase login`
+`firebase init`
+Be careful now. Use spacebar to select.
+Select hosting, enter -- configure files for Firebase hosting
+Use an existing project
+Select netflix-clone
+type `build` has to be build for react -- important!!
+Type `y` -- important
+
+Right now build/ dir is empty
+Type `npm run build`
+Now there's a lot in build/
+It builds a production ready react app
+
+run `firebase deploy`
+All done! https://netflix-clone-67ef3.web.app
