@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+Tutorial by https://www.youtube.com/watch?v=XtMThy8QKqU&ab_channel=CleverProgrammer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Step 1
+### Create a TMDB Account / API Key
+https://www.themoviedb.org/?language=en-US
 
-## Available Scripts
+The TMDB API gives movie info by genre
 
-In the project directory, you can run:
+My API Key
+e5708128b95dc520312fb5e84e9f6dde
 
-### `npm start`
+Running curl https://api.themoviedb.org/3/movie/550?api_key=e5708128b95dc520312fb5e84e9f6dde works!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Step 2
+### Create a react app
+In `netflix-react-clone` dir, run `npx create-react-app netflix-clone` This sets up everything
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Set 3
+### Set up firebase hosting
+Go to firebase.google.com
+We use Firebase to deploy the app & host it
+* Log-in with gmail
+* Add project
 
-### `npm test`
+#### Add Web app
+Click Web button
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Register App
+* Add nickname (netflix-clone), check box for Firebase Hosting
 
-### `npm run build`
+Add Firebase SDK
+* Click next
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install Firebase CLI
+* In `netflix-react-clone` dir, run `sudo npm install -g firebase-tools`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Step 4
+### Get all the movies
+cd into `netflix-clone`
+run `npm start` to start up the react app on localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clean-up
+Delete setupTests.js, logo.svg, and App.test.js. Go into App.js & remove entire header. Remove `import logo from './logo.svg';
+` Clear out app.css
 
-### `npm run eject`
+Install axios
+npm i axios
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+create requests.js (it's not a component, so don't capitalize it). Add in endpoints
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+create axios.js in src. set-up baseurl logic.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+go to App.js
+Add rows in div (yes, this dives into step 5)
+Create Row.js -- capitalize it bc it's a component
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+he typed rfce in vscode, but that didn't work for me. I just typed the template.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Step 5
+### Build Rows
+Each row is a component. Pass in a prop (standing for properties). Row.js and Row.css and App.js
 
-### Code Splitting
+## Step 6
+### Build the Banner
+Create Banner.js and Banner.css
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Step 7
+### Build the Nav NavBar
+Create Nav.js and Nav.css
 
-### Analyzing the Bundle Size
+## Step 8
+### Build the Trailer Popups
+Use react-youtube to get trailers
+`npm i react-youtube`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Use movie-trailer
+`npm i movie-trailer`
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Step 9
+## Deploy App to Firebase
